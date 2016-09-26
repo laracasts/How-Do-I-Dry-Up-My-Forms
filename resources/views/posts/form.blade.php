@@ -4,7 +4,7 @@
     <input type="text"
            name="title"
            class="input"
-           value="{{ old('title') ?? $post->title }}"
+           value="{{ old('title', $post->title) }}"
            placeholder="The title of your post."
            required>
 </div>
@@ -13,7 +13,7 @@
     <textarea
         name="body"
         class="textarea"
-        placeholder="The body for your post">{{ old('body') ?? $post->body }}</textarea>
+        placeholder="The body for your post">{{ old('body', $post->body) }}</textarea>
 </div>
 
 <button type="submit" class="button is-primary">
